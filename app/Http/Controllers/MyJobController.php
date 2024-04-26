@@ -19,7 +19,7 @@ class MyJobController extends Controller
 
 
         return view('job.index', [
-            'jobs' => myJob::with('employer')->filter($filters)->latest()->get()
+            'jobs' => myJob::with('employer')->filter($filters)->latest()->paginate('10')
         ]);
     }
 

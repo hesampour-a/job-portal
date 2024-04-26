@@ -35,4 +35,5 @@
         <x-link-button :href="route('jobs.show', $job)">Show</x-link-button>
     </x-job-card>
     @endforeach
+    {{ $jobs->links() }}
 </x-layout>
